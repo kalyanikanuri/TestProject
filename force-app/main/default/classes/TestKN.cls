@@ -1,5 +1,5 @@
 public class testKN{
-    public testKNMethod(Account acc){
+    public testKNMethod(list<Account> acc){
         return null;
     }
 }
