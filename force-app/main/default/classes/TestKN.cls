@@ -3,6 +3,7 @@ public class testKN{
         for(Account a : acc){
             a.name='name';
             a.lastname='lastname';
+            //lets see
         }
         return null;
     }
