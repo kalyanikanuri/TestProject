@@ -24,8 +24,12 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Authorizing Org
-      run: 'sfdx force:auth:jwt:grant --clientid 3MVG9y6x0357Hleejaq1U6UHVTnGzB_FVYInSJGvbGJiSZ7FjNloTvB8sE9i6Daon6mMN7qVfQDTxk.RaSyGj --jwtkeyfile server3.key --username kalyani.nemala@gmail.com -a KNOrg'
+      uses: forcedotcom/salesforcedx-actions@master
+      with:
+          args: force:auth:jwt:grant --clientid 3MVG9y6x0357Hleejaq1U6UHVTnGzB_FVYInSJGvbGJiSZ7FjNloTvB8sE9i6Daon6mMN7qVfQDTxk.RaSyGj --jwtkeyfile server3.key --username kalyani.nemala@gmail.com -a KNOrg
 
     # Runs a set of commands using the runners shell
     - name: Deploy Code
-      run: 'sfdx force:source:deploy --manifest manifest/package.xml' 
+      uses: forcedotcom/salesforcedx-actions@master
+      with:
+          args: 'sfdx force:source:deploy --manifest manifest/package.xml' 
